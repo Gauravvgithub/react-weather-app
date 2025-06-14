@@ -13,7 +13,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: linear-gradient(#f5eeff, #dac3f8);
+    background: linear-gradient(to top, #f0fff4, #c1f1d2);
 }
 
 #root {
@@ -27,7 +27,7 @@ body {
     z-index: 1;
     max-width: 410px;
     border-radius: 10px;
-    background: linear-gradient(#352163, #33143c);
+    background: linear-gradient(#2f8f78, #7ec6b2);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -78,7 +78,7 @@ body {
 }
 
 .search-section .search-input:focus {
-    border-color: #a38cd9;
+    border-color: #f0fff4;
 }
 
 .search-section .search-input::placeholder {
@@ -106,8 +106,8 @@ body {
 }
 
 .search-section .location-button:hover {
-    color: #b39fdf;
-    border-color: #a38cd9;
+    color: #f0fff4;
+    border-color: #f0fff4;
 }
 
 .weather-section :where(h2, p) {
@@ -159,7 +159,7 @@ body {
 }
 
 .hourly-forecast:hover .weather-list {
-    scrollbar-color: #c5bcdb transparent;
+    scrollbar-color: #f0fff4 transparent;
 }
 
 .hourly-forecast .weather-item {
