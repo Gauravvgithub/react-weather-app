@@ -59,7 +59,7 @@ const Footer = () => {
                           errors and location permission
                         </li>
                         <li className="list-group-item">
-                          ✅ <strong>OpenWeather API</strong> — for real-time
+                          ✅ <strong>Weather API</strong> — for real-time
                           weather data
                         </li>
                         <li className="list-group-item">
