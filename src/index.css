@@ -20,6 +20,22 @@ body {
     width: 100%;
 }
 
+.main-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-heading h2 {
+  color: #23987d;
+  margin: 1rem;
+}
+
+.main-heading button{
+    margin-top: 1rem;
+}
+
+
 .container {
     position: relative;
     overflow: hidden;

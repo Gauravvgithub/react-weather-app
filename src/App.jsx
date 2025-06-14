@@ -5,6 +5,8 @@ import SearchSection from "./components/SearchSection";
 import { weatherCodes } from "./constants";
 import NoResultsDiv from "./components/NoResultsDiv";
 import { toast } from 'react-toastify';
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const App = () => {
   const API_KEY = import.meta.env.VITE_API_KEY;
@@ -76,6 +78,7 @@ const App = () => {
 
   return (
     <>
+    <Navbar />
       <div className="container">
         {/* search section */}
         <SearchSection
@@ -104,6 +107,7 @@ const App = () => {
           </div>
         )}
       </div>
+      <Footer />
     </>
   );
 };
