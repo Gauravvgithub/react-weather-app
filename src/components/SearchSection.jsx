@@ -1,3 +1,6 @@
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const SearchSection = ({ getWeatherDetails, searchInputRef }) => {
   const API_KEY = import.meta.env.VITE_API_KEY;
 
@@ -18,13 +21,14 @@ const SearchSection = ({ getWeatherDetails, searchInputRef }) => {
         const API_URL = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${latitude},${longitude}&days=2`;
         // console.log(searchInput.value);
         getWeatherDetails(API_URL); //fetchs weather details by the users current location
-        console.log(position);
+        // console.log(position);
 
         window.innerWidth >= 768 && searchInputRef.current.focus();
+        toast.success("Location detected successfully!")
       },
       () => {
-        alert(
-          "Location access denied. Please enable permission too use this feature."
+        toast.error(
+          "Location access denied. Please enable permission to use this feature."
         );
       }
     );
@@ -47,6 +51,7 @@ const SearchSection = ({ getWeatherDetails, searchInputRef }) => {
           <span className="material-symbols-rounded">my_location</span>
         </button>
       </div>
+      <ToastContainer />
     </>
   );
 };

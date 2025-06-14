@@ -4,6 +4,7 @@ import HourlyWeatherItem from "./components/HourlyWeatherItem";
 import SearchSection from "./components/SearchSection";
 import { weatherCodes } from "./constants";
 import NoResultsDiv from "./components/NoResultsDiv";
+import { toast } from 'react-toastify';
 
 const App = () => {
   const API_KEY = import.meta.env.VITE_API_KEY;
@@ -58,9 +59,10 @@ const App = () => {
 
       searchInputRef.current.value = data.location.name;
       filterHourlyForecast(combinedHourlyData);
-    } catch {
+    } catch(error) {
       // Set setHasNoresults state if there's an error
       setHasNoResults(true);
+      toast.info("Enter correct city name");
     }
   };
 
