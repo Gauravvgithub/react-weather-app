@@ -5,7 +5,7 @@ const SearchSection = ({ getWeatherDetails, searchInputRef }) => {
   const handleCitySearch = (event) => {
     event.preventDefault();
     const searchInput = event.target.querySelector(".search-input");
-    const API_URL = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${searchInput.value}&days=2`;
+    const API_URL = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${searchInput.value}&days=2`;
     // console.log(searchInput.value);
     getWeatherDetails(API_URL); //fetchs weather details for the entered city
   };
@@ -15,7 +15,7 @@ const SearchSection = ({ getWeatherDetails, searchInputRef }) => {
     navigator.geolocation.getCurrentPosition(
       (position) => {
         const { latitude, longitude } = position.coords;
-        const API_URL = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${latitude},${longitude}&days=2`;
+        const API_URL = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${latitude},${longitude}&days=2`;
         // console.log(searchInput.value);
         getWeatherDetails(API_URL); //fetchs weather details by the users current location
         console.log(position);
