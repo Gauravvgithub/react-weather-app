@@ -90,7 +90,7 @@ const Footer = () => {
                           🔗 Live Demo
                         </a>
                         <a
-                          href="https://github.com/Gauravvgithub/react-weather-app`"
+                          href="https://github.com/Gauravvgithub/react-weather-app"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="btn btn-outline-dark"
